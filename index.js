@@ -60,25 +60,26 @@ function createRock(x) {
 }
 
 function endGame() {
-  while(ROCKS.length > 0){
-   GAME.removeChild(ROCKS[0]);
-   ROCKS.shift();
-}
-  
-  
-  
-  
-  
-  
-  
+  clearInterval(gameInterval)
 
-  clearInterval(gameInterval);
-  window.removeEventListener('keydown', moveDodger);
-  alert("YOU LOSE!");
+  ROCKS.forEach(function(rock) {rock.remove() })
+
+  document.removeEventListener('keydown', moveDodger)
+
   START.innerHTML = 'Play again?'
   START.style.display = 'inline'
-}
 
+  return alert('YOU LOSE!')
+}
+  
+  
+  
+  
+  
+  
+  
+
+  
 function moveDodger(e) {
     if (e.which === LEFT_ARROW) {
       e.stopPropagation();
