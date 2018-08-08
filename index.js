@@ -64,14 +64,6 @@ function endGame() {
    GAME.removeChild(ROCKS[0]);
    ROCKS.shift();
 }
-  //function endGame() {
-  //clearInterval(gameInterval);
-  //ROCKS.forEach(function(rock)
-    //  {rock.remove()
-      //});
-  //document.removeEventListener('keydown',moveDodger);
-  //return alert('YOU LOSE!');
-//}
   
   
   
